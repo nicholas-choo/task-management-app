@@ -1,0 +1,1472 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #F6F6F6;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 24px;
+    color: #434343;
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/* login, register, and forgot password page */
+
+.account-sec {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.account-sec form {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.account-sec form label {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.account-sec form input {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+.account-sec form input:not([type=submit]) {
+    width: 300px;
+    padding: 8px 0;
+    border-bottom: 1px #777 solid;
+    font-weight: 400;
+    color: #000;
+}
+
+.account-sec form input:not([type=submit])::placeholder {
+    color: #BBB;
+}
+
+.account-sec form input[type=submit] {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 8px 12px;
+    border-radius: 40px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #69B34C;
+    transition: background-color .2s;
+}
+
+.account-sec form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #599740;
+}
+
+.account-sec form a {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.account-sec form a:hover {
+    color: #000;
+}
+
+/* navigation */
+
+.nav-cont {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FFF;
+    pointer-events: all;
+}
+
+header a {
+    display: flex;
+    align-items: center;
+    color: #000;
+    text-decoration: none;
+}
+
+header img {
+    height: 48px;
+    width: 48px;
+    margin-right: 10px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+}
+
+header svg {
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+    border-radius: 20px;
+    color: #FFF;
+    background-color: #00A3FF;
+}
+
+header .header-button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #DDD;
+    transition: background-color .2s;
+}
+
+header .header-button:hover {
+    background-color: #BBB;
+    cursor: pointer;
+}
+
+.menu-cont {
+    height: 100%;
+    display: flex;
+    pointer-events: none;
+}
+
+.notifications {
+    height: 6px;
+    width: 6px;
+    border-radius: 3px;
+    margin-left: 10px;
+    background-color: #FF0D0D;
+    display: none;
+}
+
+.notifications.active {
+    display: block;
+}
+
+nav {
+    height: 100%;
+    width: 290px;
+    background-color: #FFF;
+    pointer-events: all;
+}
+
+nav ul {
+    padding: 20px 10px;
+    border-bottom: 1px #D6D6D6 solid;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+nav a {
+    display: grid;
+    place-items: center;
+    color: #434343;
+}
+
+nav button {
+    background: 0;
+    border: 0;
+    color: #434343;
+}
+
+nav button:hover {
+    cursor: pointer;
+}
+
+nav li {
+    padding: 6px 10px;
+    margin-top: 4px;
+    border-radius: 10px;
+    transition: background-color .2s;
+}
+
+nav li:nth-child(2) {
+    margin-top: 20px;
+}
+
+nav li:hover {
+    cursor: pointer;
+    background-color: #EEE;
+}
+
+nav li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+nav div svg {
+    height: 24px;
+    width: 24px;
+}
+
+nav li svg {
+    height: 32px;
+    width: 32px;
+    margin-right: 10px;
+}
+
+nav li a div {
+    margin: 0;
+}
+
+.nav-task-list {
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+.nav-delete-list {
+    display: none;
+    height: 24px;
+    width: 24px;
+}
+
+.nav-delete-list svg {
+    height: 24px;
+    width: 24px;
+}
+
+nav li:hover .nav-delete-list {
+    display: unset;
+}
+
+nav span {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+nav span p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, .6);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* new task dialogue box */
+
+.new-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-items: center;
+    pointer-events: all;
+}
+
+.new-list form {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.new-list form label {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.new-list form input, .new-list form button {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+.new-list form input[type=text] {
+    width: 300px;
+    padding: 8px 0;
+    border-bottom: 1px #777 solid;
+    font-weight: 400;
+    color: #000;
+}
+
+.new-list form input[type=text]::placeholder {
+    color: #BBB;
+}
+
+.new-list form input[type=color] {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+    padding: 0 2px;
+    width: 80px;
+    height: 40px;
+}
+
+.new-list form input[type=color]:hover {
+    cursor: pointer;
+}
+
+.new-list form div {
+    margin-top: 20px;
+}
+
+.new-list form button {
+    padding: 8px 12px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #FF0D0D;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.new-list form input[type=submit] {
+    padding: 8px 12px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #69B34C;
+    transition: background-color .2s;
+    margin-left: 5px;
+}
+
+.new-list form button:hover {
+    cursor: pointer;
+    background-color: #d60b0b;
+}
+
+.new-list form input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #599740;
+}
+
+.new-list form a {
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #777;
+    text-decoration: none;
+}
+
+/* delete list dialogue box */
+
+.delete-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-items: center;
+    pointer-events: all;
+}
+
+.delete-list-cont {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.delete-list-cont h1, .delete-list-cont h3 {
+    width: 300px;
+    text-align: center;
+}
+
+.delete-list-cont div {
+    margin-top: 20px;
+}
+
+.delete-list #close-delete-list {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #FF0D0D;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-list #close-delete-list:hover {
+    background-color: #d60b0b;
+}
+
+.delete-list #continue-delete-list {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #69B34C;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-list #continue-delete-list:hover {
+    background-color: #599740;
+}
+
+.delete-list-cont button:hover {
+    cursor: pointer;
+}
+
+/* global */
+
+main {
+    margin-top: 68px;
+    height: calc(100vh - 68px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+main.logged-in {
+    margin-left: 290px;
+    width: calc(100vw - 290px);
+}
+
+main::-webkit-scrollbar {
+    width: 8px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+main::-webkit-scrollbar-track:hover {
+    background-color: #CCC;
+}
+
+/* index */
+
+section:first-child {
+    height: calc(100vh - 68px);
+    display: grid;
+    place-items: center;
+}
+
+section:first-child .section-inner-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 68px;
+    position: relative;
+}
+
+section:first-child .section-inner-cont div:first-child {
+    display: grid;
+    place-items: start;
+    gap: 20px;
+    width: 700px;
+    margin-right: 80px;
+}
+
+section:first-child .section-inner-cont div span {
+    font-weight: 500;
+    font-size: 64px;
+}
+
+section:first-child .section-inner-cont div p {
+    font-weight: 400;
+    font-size: 24px;
+}
+
+section:first-child .section-inner-cont div a {
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFF;
+    padding: 14px 20px;
+    background-color: #69B34C;
+    border: 0;
+    border-radius: 14px;
+    transition: background-color .2s;
+    text-decoration: none;
+}
+
+section:first-child .section-inner-cont div a:hover {
+    background-color: #599740;
+}
+
+section:first-child .section-inner-cont img {
+    width: calc(100% - 700px - 80px);
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+}
+
+section:first-child .section-inner-cont div:last-child {
+    height: 1150px;
+    width: 1150px;
+    position: absolute;
+    background-color: #69B34CFF;
+    opacity: 90%;
+    border-radius: 50%;
+    z-index: -1;
+    top: -500px;
+    right: -700px;
+}
+
+section:nth-child(2) {
+    display: grid;
+    place-items: center;
+}
+
+section:nth-child(2) .section-inner-cont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+section:nth-child(2) .section-inner-cont div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    width: 20%;
+}
+
+section:nth-child(2) .section-inner-cont div a {
+    height: 140px;
+    width: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
+section:nth-child(2) .section-inner-cont div:first-child a {
+    background-image: url('images/smartphone.png');
+}
+
+section:nth-child(2) .section-inner-cont div:nth-child(2) a {
+    background-image: url('images/calendar.png');
+}
+
+section:nth-child(2) .section-inner-cont div:last-child a {
+    background-image: url('images/done.png');
+}
+
+section:nth-child(2) .section-inner-cont div h3 {
+    margin: 12px 0;
+}
+
+section:nth-child(2) .section-inner-cont div p {
+    text-align: justify;
+}
+
+section:nth-child(2) img {
+    width: 80%;
+    margin: 100px 0;
+}
+
+section:nth-child(2) .call-to-action {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 16px;
+    background-color: #FFF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+    margin-bottom: 100px;
+}
+
+section:nth-child(2) .call-to-action img {
+    height: 140px;
+    width: 140px;
+    margin: 0;
+}
+
+section:nth-child(2) .call-to-action span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 40px 0 20px;
+}
+
+section:nth-child(2) .call-to-action span h2 {
+    margin-bottom: 8px;
+}
+
+section:nth-child(2) .call-to-action a {
+    background-color: #69B34C;
+    padding: 12px;
+    border-radius: 8px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* home page */
+
+.home-title {
+    padding: 40px;
+    width: calc(100% - 80px);
+    border-bottom: 1px #CCC solid;
+}
+
+.home-cont {
+    padding: 40px;
+    width: calc(100% - 80px);
+}
+
+.home-task-cont {
+    background-color: #FFF;
+    border-radius: 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    margin-bottom: 40px;
+}
+
+.home-task-cont:last-child {
+    margin-bottom: 0;
+}
+
+.home-task-title {
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-task-title button {
+    height: 20px;
+    width: 20px;
+    background: 0;
+    border: 0;
+}
+
+.home-task-title button:hover {
+    cursor: pointer;
+}
+
+.home-task-title button.home-task-collapse {
+    display: none;
+}
+
+.home-task-list {
+    display: none;
+    flex-direction: column;
+}
+
+.home-task-list-head {
+    display: flex;
+    padding: 14px;
+    justify-content: space-between;
+    border-bottom: 1px #CCC solid;
+}
+
+.home-task-list-head span {
+    display: flex;
+}
+
+.home-task-list-head p {
+    font-weight: 600;
+    font-size: 12px;
+    color: #434343;
+    text-transform: uppercase;
+}
+
+.home-task-list-head span p {
+    width: 100px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.home-task-list-body {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+}
+
+.home-task-list-body div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.home-task-list-body div:last-child {
+    margin-bottom: 0;
+}
+
+.home-task-list-body div span {
+    display: flex;
+}
+
+.home-task-list-body div span:first-child p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #434343;
+}
+
+.home-task-list-body div span:last-child a, .home-task-list-body div span:last-child p {
+    font-weight: 600;
+    font-size: 12px;
+    color: #434343;
+    text-transform: uppercase;
+    width: 100px;
+    text-align: center;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.home-task-list-body div span:last-child a:hover {
+    color: #AAA;
+}
+
+.home-task-list-empty {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #434343;
+}
+
+.home-task-cont.active .home-task-title {
+    border-bottom: 1px #CCC solid;
+}
+
+.home-task-cont.active .home-task-title button.home-task-expand {
+    display: none;
+}
+
+.home-task-cont.active .home-task-title button.home-task-collapse {
+    display: block;
+    transform: rotate(180deg);
+}
+
+.home-task-cont.active .home-task-list {
+    display: flex;
+}
+
+/* notifications page */
+
+.notifications-title {
+    padding: 40px;
+    width: calc(100% - 80px);
+    border-bottom: 1px #CCC solid;
+}
+
+.notifications-cont {
+    padding: 40px;
+    width: calc(100% - 80px);
+}
+
+.notifications-inner-cont {
+    background-color: #FFF;
+    border-radius: 14px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    overflow: hidden;
+}
+
+.notifications-inner-cont div {
+    padding: 20px;
+    border-bottom: 1px #CCC solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.notifications-inner-cont div:last-child {
+    border-bottom: 0;
+}
+
+.notifications-inner-cont div span:first-child {
+    width: calc(100% - 600px);
+    margin-right: 20px;
+}
+
+.notifications-inner-cont div span:first-child p {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 12px;
+}
+
+.notifications-inner-cont div span:last-child {
+    display: flex;
+    align-items: center;
+}
+
+.notifications-inner-cont div span:last-child button {
+    padding: 4px 8px;
+    border-radius: 6px;
+    border: 0;
+    background-color: #DDD;
+    transition: background-color .2s;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.notifications-inner-cont div span:last-child p {
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.notifications-inner-cont div.active {
+    background-color: #DDD;
+}
+
+.notifications-inner-cont div.active span:last-child button {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    background-color: #EEE;
+    transition: background-color .2s;
+}
+
+.notifications-inner-cont div.active span:last-child button:hover {
+    background-color: #FFF;
+    cursor: pointer;
+}
+
+#notifications-empty {
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* calendar page */
+
+.calendar-title {
+    padding: 40px;
+    width: calc(100% - 80px);
+    border-bottom: 1px #CCC solid;
+}
+
+.calendar-cont {
+    padding: 40px;
+    width: calc(100% - 80px);
+}
+
+.calendar {
+    padding: 20px;
+    background-color: #FFF;
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.calendar-header button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #DDD;
+    transition: background-color .2s;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.calendar-header button:hover {
+    cursor: pointer;
+    background-color: #CCC;
+}
+
+.calendar-month {
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.calendar-day {
+    min-height: 80px;
+    text-align: right;
+    border: 1px solid #DDD;
+    padding: 10px;
+    background-color: #F6F6F6;
+}
+
+.calendar-task {
+    background-color: #FAB733;
+    padding: 4px 8px;
+    border-radius: 6px;
+    margin-top: 2px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+}
+
+.calendar-task p {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+}
+
+.calendar-task p:last-child {
+    opacity: 0;
+    line-height: 0;
+    margin-top: 0;
+    transition: opacity .2s ease, line-height .2s ease, margin-top .2s ease;
+}
+
+.calendar-task:hover p:last-child {
+    opacity: 1;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.calendar-task-spacer {
+    height: 10px;
+}
+
+/* task page */
+
+.list-title {
+    padding: 40px;
+    width: calc(100% - 80px);
+    border-bottom: 1px #CCC solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#list-title {
+    display: flex;
+    align-items: center;
+}
+
+#list-title span {
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    display: grid;
+    place-items: center;
+    margin-right: 20px;
+}
+
+#list-title span p {
+    color: rgba(0, 0, 0, .6);
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.list-title button {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 0;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #DDD;
+    transition: background-color .2s;
+}
+
+.list-title button:hover {
+    background-color: #BBB;
+    cursor: pointer;
+}
+
+.list-cont {
+    padding: 40px;
+    width: calc(100% - 80px);
+}
+
+.list-inner-cont {
+    margin-bottom: 40px;
+}
+
+.list-inner-cont:last-child {
+    margin-bottom: 0;
+}
+
+
+.list-inner-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-inner-title span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.list-inner-title span p {
+    width: 100px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color: #434343;
+    text-transform: uppercase;
+}
+
+.list-inner-title span:first-child {
+    display: grid;
+    place-items: center;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.list-inner-title span:first-child p {
+    width: max-content;
+    margin-left: 0;
+    font-size: 14px;
+    color: #FFF;
+}
+
+.list-tasks {
+    margin-top: 20px;
+}
+
+.empty-task {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+    color: #434343;
+}
+
+.list-tasks div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #FFF;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+    margin-top: 8px;
+    transition: background-color .2s;
+}
+
+.list-tasks div:hover {
+    background-color: #DDD;
+}
+
+.list-tasks div span {
+    display: flex;
+    align-items: center;
+}
+
+.list-tasks div span:first-child p {
+    font-weight: 500;
+    font-size: 16px;
+    color: #434343;
+    margin-right: 12px;
+}
+
+.list-tasks div:hover span:first-child button {
+    display: unset;
+}
+
+.list-tasks div span:first-child button {
+    display: none;
+    height: 20px;
+    width: 20px;
+    margin-left: 8px;
+    border: 0;
+    background-color: unset;
+}
+
+.list-tasks div span:first-child button:hover {
+    cursor: pointer;
+}
+
+.list-tasks div span:first-child svg {
+    height: 16px;
+    width: 16px;
+    color: #434343;
+}
+
+.list-tasks div span:not(:first-child) p {
+    width: 100px;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    color: #434343;
+    text-transform: uppercase;
+}
+
+.list-tasks div span input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+    margin-right: 42px;
+    margin-left: 62px;
+    border: 1px #000 solid;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 4px;
+}
+
+.list-tasks div span input[type=checkbox]:checked::before {
+    content: '✔';
+    display: block;
+    text-align: center;
+    line-height: 16px;
+    font-size: 14px;
+    color: #69B34C;
+}
+
+/* new task dialogue box */
+
+.task-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-items: center;
+    pointer-events: all;
+}
+
+.task-form form {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.task-form form label {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.task-form form input, .task-form form button {
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+}
+
+.task-form form input:not([type=checkbox]) {
+    width: 300px;
+    padding: 8px 0;
+    border-bottom: 1px #777 solid;
+    font-weight: 400;
+    color: #000;
+}
+
+.task-form form input[type=text]::placeholder,
+.task-form form input[type=date]:invalid::-webkit-datetime-edit {
+    color: #BBB;
+}
+
+
+.task-form form div {
+    width: 300px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.task-form form input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    border: 1px #000 solid;
+    appearance: none;
+    -webkit-appearance: none;
+    border-radius: 4px;
+}
+
+.task-form form input[type=checkbox]:checked::before {
+    content: '✔';
+    display: block;
+    text-align: center;
+    line-height: 18px;
+    font-size: 16px;
+    color: #69B34C;
+}
+
+.task-form form div label {
+    width: unset;
+    margin-top: unset;
+    margin-bottom: unset;
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.task-form form div:last-child {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.task-form form button {
+    padding: 8px 12px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #FF0D0D;
+    transition: background-color .2s;
+    margin-right: 10px;
+}
+
+.task-form form button:hover {
+    cursor: pointer;
+    background-color: #d60b0b;
+}
+
+.task-form form button:last-child {
+    background-color: #69B34C;
+    margin-right: 0;
+}
+
+.task-form form button:last-child:hover {
+    background-color: #599740;
+}
+
+/* delete task dialogue box */
+
+.delete-task {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-items: center;
+    pointer-events: all;
+}
+
+.delete-task-cont {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.delete-task-cont h1, .delete-task-cont h3 {
+    width: 300px;
+    text-align: center;
+}
+
+.delete-task-cont div {
+    margin-top: 20px;
+}
+
+.delete-task #close-delete-task {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #FF0D0D;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-task #close-delete-task:hover {
+    background-color: #d60b0b;
+}
+
+.delete-task #continue-delete-task {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #69B34C;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-task #continue-delete-task:hover {
+    background-color: #599740;
+}
+
+.delete-task-cont button:hover {
+    cursor: pointer;
+}
+
+/* profile page */
+
+.profile-title {
+    padding: 40px;
+    width: calc(100% - 80px);
+    border-bottom: 1px #CCC solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-cont {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.profile-cont button {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #DDD;
+    transition: background-color .2s;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.profile-cont button:hover {
+    background-color: #BBB;
+    cursor: pointer;
+}
+
+.delete-account-confirmation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    place-items: center;
+    pointer-events: all;
+}
+
+.delete-account-confirmation form {
+    display: grid;
+    place-items: center;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .05);
+}
+
+.delete-account-confirmation h1 {
+    width: 300px;
+    text-align: center;
+}
+
+.delete-account-confirmation p {
+    width: 300px;
+    text-align: justify;
+}
+
+.delete-account-confirmation input, .delete-account-confirmation span {
+    margin-top: 20px;
+}
+
+.delete-account-confirmation input {
+    width: 300px;
+    border: 0;
+    outline: 0;
+    padding: 8px 0;
+    border-bottom: 1px #777 solid;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+}
+
+.delete-account-confirmation #cancel-delete {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #FF0D0D;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-account-confirmation #cancel-delete:hover {
+    background-color: #d60b0b;
+}
+
+.delete-account-confirmation #continue-delete {
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FFF;
+    background-color: #69B34C;
+    transition: background-color .2s;
+    margin-right: 5px;
+}
+
+.delete-account-confirmation #continue-delete:hover {
+    background-color: #599740;
+}
+
+.delete-account-confirmation button:hover {
+    cursor: pointer;
+}
