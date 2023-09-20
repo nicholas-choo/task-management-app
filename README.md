@@ -1,6 +1,6 @@
 # TaskTracker
 
-Effortlessly manage tasks and boost productivity with TaskTracker - your all-in-one task management app. Streamline your workflow, organize projects, set priorities, collaborate seamlessly, and never miss a deadline again. From intuitive task creation to smart reminders, TaskTracker empowers you to stay on top of your tasks and achieve your goals with ease.
+Effortlessly manage tasks and boost productivity with TaskTracker - your all-in-one task management app. Streamline your workflow, organize projects, set priorities, and never miss a deadline again. From intuitive task creation to smart reminders, TaskTracker empowers you to stay on top of your tasks and achieve your goals with ease.
 
 ## Features
 
